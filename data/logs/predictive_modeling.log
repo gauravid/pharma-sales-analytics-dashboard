@@ -1,0 +1,47 @@
+2026-07-02 23:50:35,036 [INFO] Initializing SFE Predictive Layer Pipeline...
+2026-07-02 23:50:35,036 [INFO] Starting Pre-Training Data Quality Audit...
+2026-07-02 23:50:35,186 [INFO] Missing Values: sales_targets=0, calls=2074 (expected due to CRM late logging), prescriptions=0
+2026-07-02 23:50:35,189 [INFO] Outlier Detection: Found 0 records with actual_sales Z-Score > 3.0
+2026-07-02 23:50:35,190 [INFO] History Check: 0 territories have incomplete history (expected 12 months)
+2026-07-02 23:50:35,190 [INFO] Data Quality Audit complete. Proceeding to Model Training.
+2026-07-02 23:50:35,190 [INFO] Pre-processing Sales Data for Forecasting...
+2026-07-02 23:50:35,198 [INFO] Time Series CV Fold (Month 07) | Reg MAPE: 4.49% vs. Base MAPE: 6.08%
+2026-07-02 23:50:35,203 [INFO] Time Series CV Fold (Month 08) | Reg MAPE: 5.12% vs. Base MAPE: 5.21%
+2026-07-02 23:50:35,207 [INFO] Time Series CV Fold (Month 09) | Reg MAPE: 4.93% vs. Base MAPE: 5.95%
+2026-07-02 23:50:35,211 [INFO] Time Series CV Fold (Month 10) | Reg MAPE: 5.68% vs. Base MAPE: 6.52%
+2026-07-02 23:50:35,215 [INFO] Time Series CV Fold (Month 11) | Reg MAPE: 4.22% vs. Base MAPE: 5.61%
+2026-07-02 23:50:35,218 [INFO] Time Series CV Fold (Month 12) | Reg MAPE: 4.48% vs. Base MAPE: 5.10%
+2026-07-02 23:50:35,218 [INFO] 
+--- SALES FORECAST MODEL VALIDATION SUMMARY ---
+2026-07-02 23:50:35,218 [INFO] Baseline (Naïve) Forecast   | Average MAE: $6,066.69 | Average MAPE: 5.74%
+2026-07-02 23:50:35,218 [INFO] Linear Regression Model     | Average MAE: $5,143.86 | Average MAPE: 4.82%
+2026-07-02 23:50:35,218 [INFO] Training Final Sales Forecast Model on Full 12 Months...
+2026-07-02 23:50:35,271 [INFO] Month 13 Sales Forecast successfully exported.
+2026-07-02 23:50:35,271 [INFO] Projecting Q4 Rep Performance & Risk Flags...
+2026-07-02 23:50:35,281 [INFO] Q4 Rep Risk Projector successfully exported.
+2026-07-02 23:50:35,281 [INFO] Preparing HCP Prescribing Dataset...
+2026-07-02 23:50:35,367 [INFO] 
+--- HCP CLASSIFICATION MODEL METRICS (HOLDOUT) ---
+2026-07-02 23:50:35,367 [INFO] Accuracy : 0.7157
+2026-07-02 23:50:35,367 [INFO] Precision: 0.7055
+2026-07-02 23:50:35,367 [INFO] Recall   : 0.7055
+2026-07-02 23:50:35,367 [INFO] F1-Score : 0.7055
+2026-07-02 23:50:35,367 [INFO] ROC-AUC  : 0.7649
+2026-07-02 23:50:35,367 [INFO] Training Final Classifier and Predicting Month 13 Probabilities...
+2026-07-02 23:50:35,393 [INFO] Month 13 HCP Prescribing Propensity Scores successfully exported.
+2026-07-02 23:50:35,395 [INFO] 
+--- SALES FORECAST COEFFICIENTS ---
+2026-07-02 23:50:35,395 [INFO] Feature: month_idx       | Coefficient: 161.2324
+2026-07-02 23:50:35,395 [INFO] Feature: lag_1           | Coefficient: 0.1014
+2026-07-02 23:50:35,395 [INFO] Feature: rolling_3m_avg  | Coefficient: 0.8643
+2026-07-02 23:50:35,395 [INFO] Intercept: 2494.3868
+2026-07-02 23:50:35,395 [INFO] 
+--- HCP CLASSIFIER COEFFICIENTS & ODDS RATIOS ---
+2026-07-02 23:50:35,395 [INFO] Feature: prescribing_decile     | Coefficient: 0.0196 | Odds Ratio: 1.0197
+2026-07-02 23:50:35,395 [INFO] Feature: lag_calls              | Coefficient: -0.3632 | Odds Ratio: 0.6955
+2026-07-02 23:50:35,395 [INFO] Feature: trx_trend              | Coefficient: -0.0489 | Odds Ratio: 0.9523
+2026-07-02 23:50:35,395 [INFO] Feature: specialty_Endocrinology | Coefficient: 0.0078 | Odds Ratio: 1.0079
+2026-07-02 23:50:35,395 [INFO] Feature: specialty_Primary Care | Coefficient: 0.0484 | Odds Ratio: 1.0496
+2026-07-02 23:50:35,395 [INFO] Generating SFE Business Recommendations...
+2026-07-02 23:50:35,425 [INFO] Business Recommendations successfully exported.
+2026-07-02 23:50:35,426 [INFO] SFE Predictive Layer execution complete. Ready for Power BI integration.

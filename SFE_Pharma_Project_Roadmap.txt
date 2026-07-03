@@ -1,0 +1,294 @@
+PROJECT 2 ROADMAP
+Sales Force Effectiveness & Market Access Analytics
+A step-by-step build guide for Business Analyst portfolios & placements
+DIFFICULTY
+TIMELINE
+PHASES
+TECH TOOLS
+5.5 / 10
+4 Weeks
+5 Phases
+9 Tools
+
+1. What Is This Project?
+You are building a system that tells a VP of Sales at a pharma company exactly which sales reps, territories, and doctors (HCPs) to focus on next — the same judgment call a senior sales operations analyst makes every quarter, but backed by data instead of gut feel, and produced in hours instead of weeks.
+Right now, in most mid-sized pharma companies, when leadership asks “why is Region X underperforming?” someone has to manually:
+Pull rep call logs from the CRM and reconcile them against the call plan
+Pull prescription (NRx/TRx) data and match it to territories and HCPs
+Build a spreadsheet comparing region against region
+Guess at root cause from a handful of charts
+Present a recommendation that's really just an opinion dressed up in a slide
+This takes one to three weeks every quarter. Your system does the same underlying analysis — adherence, prescribing trends, territory potential, root cause — in a single SQL + dashboard pipeline you build once and refresh monthly.
+Real World Equivalent
+This is the same kind of work that Veeva CRM's “Align” module, Aktana, and IQVIA's territory analytics products are built to do. Pharma companies pay six and seven figures a year for platforms that do exactly this — call plan optimization, HCP targeting, and territory alignment.
+2. How It Works — The Core Idea
+The entire logic of this project comes from one simple idea:
+Core Flow
+Raw rep/HCP/Rx data  →  SQL turns it into KPIs (adherence, NRx/TRx, SOV, territory potential)  →  Dashboard surfaces who/where to prioritize  →  A simple regression model adds a forward-looking layer (next month's forecast, at-risk reps, ranked opportunity)
+You are NOT building a live CRM integration. You are NOT training a deep learning model. The KPIs are well-established pharma commercial formulas — you are just calculating them correctly, consistently, and making them visible to the right person at the right time.
+The 5-Step Flow
+#
+Step
+1
+Synthetic-but-realistic sales/HCP/Rx data is generated to stand in for a real CRM + claims data extract
+2
+Data is loaded into a SQL database (SQLite) with proper relationships — reps, territories, HCPs, calls, prescriptions
+3
+SQL queries calculate every KPI: Call Plan Adherence, NRx/TRx trend, Share of Voice, Territory Potential Index
+4
+A Power BI dashboard visualizes KPIs with drill-down filters by region/territory/rep/HCP
+5
+A lightweight regression model forecasts next month's territory sales and flags at-risk reps
+3. Your Dataset — Where the Data Comes From
+You do not need a real Veeva export to do this project credibly. You generate a structurally realistic synthetic dataset using Python — the same field structure real pharma CRM and claims data has, with realistic noise (missing calls, duplicate HCP records, a deliberately underperforming region) built in on purpose.
+Why synthetic data is the right call here
+Real patient-level prescription data is protected health information and is never given out for a portfolio project. Every pharma BA candidate who claims to have “real” Rx data in a portfolio project is either lying or about to have an awkward compliance conversation. A clearly-labeled, well-structured synthetic dataset is the honest and expected approach — and it's exactly what you'll say in the interview.
+What You Generate (Per Entity)
+Field group
+What it is
+Rep Master
+Rep ID, name, territory assignment, hire date / tenure
+Territory Master
+Territory ID, region, call plan target, potential-index inputs
+HCP Master
+HCP ID, synthetic name, specialty, territory, prescribing decile
+Call Activity Log
+Call ID, rep ID, HCP ID, date, planned-vs-actual flag, call type
+Prescription Data
+HCP ID, brand, month, NRx count, TRx count
+Sales & Target Data
+Territory ID, month, actual sales, target sales
+One Python script using pandas + Faker generates all of this in a few minutes. It is completely free — no API key, no signup, no data licensing fee.
+4. Tech Stack — Every Tool Explained Simply
+Tool
+What it does
+Difficulty
+Time to learn
+Python (pandas, Faker)
+Generates the synthetic dataset and does light data cleaning
+Easy
+You likely know it
+SQLite
+Free, file-based SQL database — no server install needed
+Easy
+1 day
+DB Browser for SQLite
+Free GUI to browse tables and run queries visually
+Easy
+1 hour
+SQL (joins, window functions, CTEs)
+Calculates every KPI — adherence, NRx/TRx, SOV, territory potential
+Easy-Med
+3-4 days
+draw.io (diagrams.net)
+Free diagramming tool for As-Is/To-Be process maps, ER diagram, issue tree
+Easy
+Half a day
+Power BI Desktop
+Free BI tool to build the rep/territory dashboard — industry standard in pharma commercial ops
+Medium
+1 week
+Google Colab / Jupyter
+Free, no-install notebook to run the regression forecast
+Easy
+1 day
+scikit-learn / statsmodels
+Linear regression for sales forecasting and rep risk flagging
+Easy-Med
+2-3 days
+Google Slides / PowerPoint
+Builds the executive summary deck for the VP of Sales
+Easy
+1 day
+The Only Genuinely New Skill
+Power BI is the only tool here that takes real, deliberate practice — about a week if you've never used a BI tool before. Everything else (SQL, a basic regression, a process diagram) is something most BA-track learners pick up fast. Once you're comfortable dragging fields onto a Power BI canvas, the rest of this project is mostly filling in KPIs you already calculated in SQL.
+
+5. Phase-by-Phase Roadmap
+Total estimated time: 4 weeks. Each phase builds on the previous one. Do not skip ahead — a dashboard built on top of wrong SQL is worse than no dashboard.
+Phase 1   Foundation, Stakeholders & Dataset
+Days 1–6
+
+What you are doing
+Defining what you're actually solving for, then generating and cleaning the dataset you'll analyze everything else on top of. Skipping this and jumping to SQL is the single most common mistake on this project.
+Day 1: Requirements & Scope
+Write the stakeholder interview script (VP Sales, Brand Manager, Field Ops, Regional Manager) — even if simulated, write real questions, not placeholders
+Convert answers into a requirements log: 10–12 numbered requirements, each tagged Must/Should/Could (MoSCoW)
+Decide your KPI list up front: Call Plan Adherence, NRx, TRx, Share of Voice, Territory Potential Index — you will calculate all of these in Phase 2
+Day 2: Set Up Your Project
+Create a GitHub repo (free) for the project — this becomes your portfolio link
+Set up a Python virtual environment
+Install: pandas, faker, numpy, sqlite3 (built into Python), jupyter
+Create a folder structure: /data, /sql, /notebooks, /dashboard, /docs
+Day 3–4: Generate the Synthetic Dataset
+Write a Python script using Faker + pandas that generates: 5 regions × 8 territories, ~40 reps, ~600 HCPs, 12 months of call logs, 12 months of NRx/TRx, 12 months of sales vs. target
+Deliberately inject realistic messiness: ~5% missing call records, a handful of duplicate HCP IDs, one region (Region X) seeded with below-peer adherence and below-peer HCP coverage on purpose
+Save everything as CSVs, then load into a single SQLite database file (sfe_analytics.db)
+Print row counts and a few sample rows from each table — verify nothing is empty or obviously broken
+Day 5: Build the Data Dictionary & ER Diagram
+Document every table and field in a simple data dictionary (table name, field name, type, description)
+Draw the entity-relationship diagram in draw.io showing how Rep, Territory, HCP, Call, and Sales tables connect
+Day 6: Process Mapping
+Draw the As-Is process: how territory performance review happens today (manual, lagging, region-level only)
+Draw the To-Be process: automated KPI pipeline → dashboard → drill-down → proactive flags
+Draw the root-cause issue tree for “why is Region X underperforming” — branches: sales force issue, market access issue, targeting/mix issue, external/market issue
+Why spend a full week on this before touching SQL?
+Every interviewer will ask: “How did you decide what to measure?” and “How did you make sure your data was usable?” Having a real requirements log and a real (if synthetic) data-cleaning story — not just “I downloaded a CSV” — is what separates a BA portfolio project from a generic data project. Spend the time here.
+
+Phase 2   SQL Analysis — Calculating Every KPI
+Days 7–12
+
+What you are doing
+Turning the raw tables into the actual business answers — adherence, prescribing trends, Share of Voice, and territory ranking — entirely in SQL. This is the analytical core of the project.
+Day 7: Set Up Your SQL Environment
+Open sfe_analytics.db in DB Browser for SQLite (free GUI) to explore tables visually
+Alternatively connect via VS Code with a SQLite extension, or DBeaver Community Edition, for a code-editor feel
+Run basic exploratory queries: row counts per table, date range covered, null checks on key fields
+Day 8: Call Plan Adherence
+Write a query that calculates: (Completed Calls ÷ Planned Calls) × 100, grouped by rep, by month
+Roll it up to territory level and region level using GROUP BY + aggregate functions
+Sanity check: does Region X show visibly lower adherence than the other four regions? It should — you seeded it that way in Phase 1
+Day 9: NRx / TRx Trend
+Query monthly NRx and TRx by HCP and by territory
+Use a window function (LAG) to calculate month-over-month % change
+Identify the top 20% of HCPs by total TRx — these are your high-value prescribers
+Day 10: Share of Voice & Territory Potential Index
+Calculate Share of Voice = (brand-related calls ÷ estimated total category calls) × 100 per territory
+Build the Territory Potential Index: a weighted SQL CASE/normalization combining category Rx volume, target-specialty HCP count, and a patient-volume proxy
+Calculate Territory Opportunity Gap = Potential Index (scaled) − Actual Sales — this becomes your prioritization ranking
+Day 11: HCP Targeting Query
+Write a query that flags HCPs in the top 2 prescribing deciles whose call frequency is below the territory median — these are your under-served, high-potential doctors
+Export this list — it is one of your most concrete, actionable deliverables
+Day 12: Root Cause Validation
+Run side-by-side queries comparing Region X against the best-performing region across: adherence %, average rep tenure, Share of Voice, and HCP coverage gap
+Confirm (or revise) your issue-tree hypothesis from Phase 1 using the actual numbers — write a 3–4 sentence conclusion you can defend in the executive summary
+Interview talking point
+Be ready to explain: (1) Why SQLite over a heavier database? — zero setup cost, file-based, perfectly adequate for a dataset this size, and trivially portable for a portfolio repo. (2) Why calculate KPIs in SQL rather than in Power BI's DAX? — keeps the logic transparent, testable, and reusable outside of any one BI tool. (3) How did you validate Territory Potential Index weights? — sensitivity-checked the weighting against known high-performing territories to confirm the ranking matched intuition before trusting it for new territories.
+
+Phase 3   Power BI Dashboard — Rep & Territory View
+Days 13–19
+
+What you are doing
+Turning your SQL output into a self-service dashboard the VP of Sales, Brand Manager, and Regional Managers can actually use without calling you every time. This is the most visually demanding phase, and the one most candidates under-invest in.
+Day 13: Install & Connect
+Download Power BI Desktop (free for individual/local use, Windows only — use a free Windows VM or a lab machine if you're on Mac)
+Connect Power BI to your sfe_analytics.db SQLite file (via ODBC driver) or simply import your SQL query outputs as CSVs if the ODBC setup is friction-heavy
+Load your KPI tables: rep adherence, territory potential/opportunity gap, HCP targeting list, NRx/TRx trend
+Day 14–15: Build the Data Model
+Set up relationships between Rep, Territory, HCP, and date tables inside Power BI's model view
+Create a proper Date table for time-intelligence calculations (month-over-month, YTD)
+Write 3–5 core DAX measures: Total Sales, Attainment %, Adherence %, SOV %, Opportunity Gap
+Day 16–17: Build the Pages
+Page 1 — Executive Overview: region-level KPI cards (Adherence, NRx/TRx trend, Attainment %) with a map or bar chart by region
+Page 2 — Territory Prioritization: a ranked table/bar chart of territories by Opportunity Gap, filterable by region
+Page 3 — Rep Performance: table of reps with adherence %, attainment %, and a conditional-formatted flag for at-risk reps (built in Phase 4)
+Page 4 — HCP Targeting: the under-served high-potential HCP list from Phase 2, Day 11, filterable by territory
+Day 18: Add Interactivity
+Add slicers for Region, Territory, Rep, and Month across all pages
+Add drill-through from the Territory Prioritization page to the Rep Performance page for that territory
+Add tooltips showing the underlying calculation when hovering over a KPI card (builds stakeholder trust in the number)
+Day 19: Polish & Sanity-Check
+Cross-check 5–10 numbers on the dashboard against your raw SQL output — catch model/relationship errors now, not in front of a stakeholder
+Clean up formatting: consistent currency/decimal formatting, clear titles, a simple consistent color palette (use red/amber/green sparingly and only for true performance status)
+Export 4–5 dashboard screenshots — you'll need these for the executive deck and your portfolio README
+Why dashboard, not just a slide of numbers?
+A VP of Sales does not want a snapshot — they want to ask their own follow-up question (“what about just my top 5 territories?”) without waiting for you to rebuild a chart. A self-service Power BI file demonstrates exactly the BA skill that separates an analyst from a report-writer.
+
+Phase 4   Predictive Layer — Forecast & Risk Flags
+Days 20–24
+
+What you are doing
+Adding the lightweight forward-looking layer that turns this from a reporting project into an analytics project — without turning it into a full data science build. Simple, explainable models only.
+Day 20: Set Up & Explore
+Open Google Colab (free, no install, runs in browser) or a local Jupyter notebook
+Load your 12 months of territory-level sales data via pandas (read from SQLite or CSV export)
+Plot sales trend per territory — visually confirm seasonality/trend before modeling anything
+Day 21: Next-Month Sales Forecast
+Build a simple linear regression (or rolling average baseline first, for comparison) predicting next month's territory sales from prior months' trend
+Use scikit-learn's LinearRegression — keep it to 1–3 features (month index, prior-month sales, rolling 3-month average) deliberately, not a complex feature set
+Hold out the last 1–2 months as a test set; report Mean Absolute Error (MAE) or MAPE so you have a real number to quote
+Day 22: Rep Risk Flag
+Calculate each rep's current pace: (Actual Sales to Date ÷ Days Elapsed) × Days Remaining in Quarter → projected quarter-end attainment
+Flag any rep with projected attainment below 90% of target as “At Risk” — a simple rule-based flag, not a black-box model, on purpose, because the VP needs to be able to explain it to the rep
+Day 23: Territory Opportunity Ranking & HCP Scoring
+Rank territories by predicted Opportunity Gap (using the forecast from Day 21 against the Territory Potential Index from Phase 2)
+Optional stretch: a simple logistic regression flagging HCPs likely to increase prescriptions next period, using specialty, current TRx trend, and call frequency as features
+Day 24: Bring Predictions Back Into the Dashboard
+Export forecast and risk-flag outputs as CSVs
+Load them into Power BI as a new table, joined to your existing Rep/Territory model
+Add a “Forecast & Risk” page: predicted next-month sales by territory, and a flagged list of at-risk reps
+Interview talking point
+Be ready to explain: (1) Why linear regression and not XGBoost or a neural net? — the dataset is small, the relationship is simple, and a model the VP of Sales can question and understand beats a marginally more accurate black box. (2) How did you validate the forecast? — held out the last 2 months, compared predicted vs. actual, reported MAPE. (3) Why a rule-based risk flag instead of a classifier? — transparency matters more than a few points of accuracy when the output affects how a manager talks to their rep.
+
+Phase 5   Documentation, Deck & Final Polish
+Days 25–28
+
+What you are doing
+Packaging everything into the documents a real BA would actually hand to stakeholders — and making the whole project easy for an interviewer (or you, six months from now) to follow.
+Day 25: BRD & FRD
+Write the Business Requirement Document: business objectives, in-scope/out-of-scope, assumptions, risks, success criteria
+Write the Functional Requirement Document: exact KPI formulas, data fields required, dashboard behavior — this should map directly to the SQL you already wrote in Phase 2
+Day 26: User Stories, Acceptance Criteria & Traceability Matrix
+Write 8–10 user stories in “As a [stakeholder], I want [capability], so that [benefit]” format
+Write 2–3 acceptance criteria per story (Given/When/Then format works well)
+Build a traceability matrix: Requirement ID → Functional Requirement ID → User Story → Test Case → Dashboard Page — in Google Sheets or Excel
+Day 27: Executive Summary Deck
+Build a 6–8 slide deck in Google Slides or PowerPoint: problem statement, approach, key findings (Region X root cause), top 5 recommendations, forecast highlight, next steps
+Use your Phase 3 dashboard screenshots and Phase 1 issue-tree diagram — do not rebuild charts from scratch in the deck
+Keep it to numbers a VP would actually act on — cut anything that's interesting but not decision-relevant
+Day 28: GitHub Portfolio Polish
+Push the data generator script, all .sql files, the Jupyter notebook, the Power BI file (or screenshots if file size is an issue), and all documentation to a public GitHub repo
+Write a clean README: problem statement, architecture diagram, how to run it, and a link to the dashboard screenshots/deck
+Proofread every document once more — a typo in a BRD undermines the “detail-oriented BA” impression faster than almost anything else
+Final Advice
+The goal is not a perfect dashboard. The goal is a project where you can explain every number — why Territory Potential Index is weighted the way it is, why Region X is actually underperforming, and why your forecast model is a linear regression and not something fancier. A complete, well-documented, honestly-scoped project beats an impressive-looking one you can't defend in a follow-up question.
+
+6. What to Say in Interviews
+This is as important as the project itself. Here is how to describe it at three levels of depth:
+30-Second Version (for HR / initial screening)
+
+“I built an end-to-end sales force effectiveness analysis for a specialty pharma brand. I gathered requirements from simulated VP Sales, Brand Manager, and Field Ops stakeholders, calculated pharma KPIs like Call Plan Adherence, NRx/TRx, and Share of Voice in SQL, built a Power BI dashboard to prioritize territories and HCPs, and added a simple regression model to forecast next month's sales and flag reps at risk of missing target. The whole thing runs on free tools end-to-end.”
+Technical Deep Dive (for senior BAs / analytics leads)
+I deliberately used SQLite over a hosted database to keep the project zero-cost and fully portable — the entire pipeline reproduces from a single file. Why SQLite
+I calculated every KPI in SQL rather than in Power BI's DAX layer, so the logic is transparent, testable independent of the BI tool, and reusable if we ever swapped Power BI for Tableau. Why SQL-first
+I built the Territory Potential Index as a transparent weighted formula rather than a model, and sensitivity-checked the weights against territories I already knew were high-performing before trusting it on the rest. How I validated the prioritization logic
+I deliberately chose linear regression for the forecast over a more complex model because the dataset is small and the audience needs to be able to question the prediction — I reported MAPE on a held-out 2-month test window so there's a real accuracy number behind it. Forecasting approach
+7. Common Mistakes to Avoid
+Mistake
+What to do instead
+Building the dashboard before validating SQL KPIs
+Spot-check every KPI against raw data manually before it ever touches Power BI
+Treating Territory Potential Index as objective truth
+Document it as a model with assumptions, and sensitivity-check the weights
+Skipping the requirements/BRD phase to get to the “fun part”
+Spend Phase 1 on stakeholder needs first — it's what interviewers probe hardest
+Using a complex ML model for the forecast
+Use linear regression; the point is explainability, not accuracy points
+Presenting numbers without a root-cause story
+Always pair a KPI with the “so what” — use the issue tree to structure the explanation
+Claiming the data is “real pharma data”
+Be explicit that it's synthetic-but-realistic — honesty here builds more credibility, not less
+8. Timeline Summary
+Phase
+What you build
+Duration
+Hardest part
+Phase 1
+Requirements, dataset, process maps
+Days 1–6
+Generating realistic synthetic data with intentional messiness
+Phase 2
+SQL KPI calculations
+Days 7–12
+Getting the Territory Potential Index weighting right
+Phase 3
+Power BI dashboard
+Days 13–19
+Data model relationships and DAX time-intelligence
+Phase 4
+Forecast & risk flags
+Days 20–24
+Resisting the urge to over-build the model
+Phase 5
+BRD/FRD, deck, documentation
+Days 25–28
+Keeping the executive deck to decision-relevant numbers only

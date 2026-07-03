@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Database
+*.db
+*.sqlite
+
+# CSV Exports
+data/exports/
+
+# Processed data
+data/processed/
+
+# Power BI cache
+*.pbix.autorecover
+
+# OS files
+.DS_Store
+Thumbs.db

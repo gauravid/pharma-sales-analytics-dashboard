@@ -1,0 +1,232 @@
+2026-07-01 00:34:41,697 [INFO] Starting SFE SQL query execution pipeline...
+2026-07-01 00:34:41,704 [INFO] Executing script: sql/base_views.sql
+2026-07-01 00:34:41,751 [INFO] Successfully completed: sql/base_views.sql
+2026-07-01 00:34:41,751 [INFO] Executing script: sql/indexes.sql
+2026-07-01 00:34:41,753 [INFO] Successfully completed: sql/indexes.sql
+2026-07-01 00:34:41,753 [INFO] Executing script: sql/exploratory_queries.sql
+2026-07-01 00:34:41,796 [INFO] 
+Query Results:
+   table_name  row_count
+  territories         40
+         reps         40
+         hcps        605
+        calls      35086
+prescriptions      21780
+sales_targets        480
+--------------------------------------------------
+2026-07-01 00:34:41,809 [INFO] 
+Query Results:
+   table_name   min_date   max_date
+        calls 2025-01-01 2025-12-31
+prescriptions 2025-01-01 2025-12-31
+sales_targets 2025-01-01 2025-12-31
+--------------------------------------------------
+2026-07-01 00:34:41,813 [INFO] 
+Query Results:
+ distinct_territories  distinct_reps  distinct_hcps  distinct_brands
+                   40             40            605                3
+--------------------------------------------------
+2026-07-01 00:34:41,819 [INFO] 
+Query Results:
+     hcp_name     specialty  occurrences
+   Dr. Adkins  Primary Care            2
+ Dr. Anderson  Primary Care            3
+    Dr. Baker    Cardiology            3
+    Dr. Baker  Primary Care            2
+    Dr. Brown  Primary Care            3
+     Dr. Byrd  Primary Care            2
+   Dr. Cannon  Primary Care            2
+  Dr. Charles  Primary Care            2
+    Dr. Clark  Primary Care            4
+  Dr. Coleman  Primary Care            2
+  Dr. Collins    Cardiology            2
+  Dr. Daniels  Primary Care            2
+    Dr. Davis  Primary Care            3
+  Dr. Elliott  Primary Care            2
+   Dr. Garcia Endocrinology            2
+   Dr. Garcia  Primary Care            2
+   Dr. Gibson  Primary Care            2
+   Dr. Graham    Cardiology            2
+     Dr. Gray Endocrinology            2
+    Dr. Green  Primary Care            2
+   Dr. Harris  Primary Care            2
+    Dr. Hayes  Primary Care            2
+Dr. Henderson    Cardiology            2
+Dr. Henderson  Primary Care            2
+Dr. Hernandez    Cardiology            2
+  Dr. Herrera  Primary Care            2
+     Dr. Hill Endocrinology            2
+     Dr. Hill  Primary Care            2
+  Dr. Jackson  Primary Care            2
+  Dr. Johnson Endocrinology            3
+  Dr. Johnson  Primary Care            4
+    Dr. Jones    Cardiology            3
+    Dr. Jones Endocrinology            6
+    Dr. Jones  Primary Care            4
+    Dr. Keith Endocrinology            2
+   Dr. Kelley  Primary Care            2
+  Dr. Kennedy Endocrinology            2
+      Dr. Lee  Primary Care            4
+    Dr. Lewis    Cardiology            2
+    Dr. Lewis Endocrinology            2
+    Dr. Lewis  Primary Care            3
+    Dr. Lyons  Primary Care            2
+   Dr. Martin    Cardiology            2
+ Dr. Martinez  Primary Care            6
+   Dr. Miller    Cardiology            5
+    Dr. Mills  Primary Care            2
+ Dr. Mitchell    Cardiology            2
+    Dr. Moore    Cardiology            2
+    Dr. Moore  Primary Care            2
+  Dr. Morales  Primary Care            2
+   Dr. Nelson    Cardiology            2
+   Dr. Oliver  Primary Care            2
+   Dr. Parker  Primary Care            2
+Dr. Patterson  Primary Care            2
+    Dr. Perez Endocrinology            2
+    Dr. Perez  Primary Care            2
+    Dr. Perry  Primary Care            2
+   Dr. Pierce  Primary Care            2
+   Dr. Powell Endocrinology            2
+    Dr. Rivas Endocrinology            2
+ Dr. Robinson  Primary Care            2
+Dr. Rodriguez  Primary Care            5
+   Dr. Rogers Endocrinology            2
+     Dr. Ryan    Cardiology            2
+     Dr. Ryan  Primary Care            2
+  Dr. Sanchez  Primary Care            3
+    Dr. Silva Endocrinology            2
+    Dr. Smith    Cardiology            5
+    Dr. Smith  Primary Care            8
+   Dr. Torres    Cardiology            2
+   Dr. Torres  Primary Care            2
+   Dr. Tucker    Cardiology            2
+   Dr. Vaughn  Primary Care            2
+   Dr. Walker  Primary Care            4
+    Dr. Walsh Endocrinology            2
+   Dr. Walton  Primary Care            2
+   Dr. Warner  Primary Care            2
+ Dr. Williams    Cardiology            2
+ Dr. Williams Endocrinology            2
+   Dr. Wilson Endocrinology            3
+   Dr. Wilson  Primary Care            2
+     Dr. Wood  Primary Care            2
+   Dr. Wright Endocrinology            2
+   Dr. Wright  Primary Care            4
+--------------------------------------------------
+2026-07-01 00:34:41,841 [INFO] 
+Query Results:
+               issue_type  issue_count
+        calls_without_hcp            0
+        calls_without_rep            0
+prescriptions_without_hcp            0
+   reps_without_territory            0
+--------------------------------------------------
+2026-07-01 00:34:41,841 [INFO] Query returned 0 rows.
+--------------------------------------------------
+2026-07-01 00:34:41,843 [INFO] 
+Query Results:
+ out_of_period_calls_count
+                         0
+--------------------------------------------------
+2026-07-01 00:34:41,856 [INFO] 
+Query Results:
+ null_dates  null_hcp_ids  null_statuses
+          0           361           1713
+--------------------------------------------------
+2026-07-01 00:34:41,856 [INFO] Successfully completed: sql/exploratory_queries.sql
+2026-07-01 00:34:41,857 [INFO] Executing script: sql/call_adherence.sql
+2026-07-01 00:34:41,871 [INFO] Successfully completed: sql/call_adherence.sql
+2026-07-01 00:34:41,872 [INFO] Executing script: sql/prescription_trends.sql
+2026-07-01 00:34:41,888 [INFO] Successfully completed: sql/prescription_trends.sql
+2026-07-01 00:34:41,888 [INFO] Executing script: sql/market_share_potential.sql
+2026-07-01 00:34:41,911 [INFO] Successfully completed: sql/market_share_potential.sql
+2026-07-01 00:34:41,912 [INFO] Executing script: sql/hcp_targeting.sql
+2026-07-01 00:34:41,923 [INFO] Successfully completed: sql/hcp_targeting.sql
+2026-07-01 00:34:41,924 [INFO] Executing script: sql/root_cause_validation.sql
+2026-07-01 00:34:41,938 [INFO] Successfully completed: sql/root_cause_validation.sql
+2026-07-01 00:34:41,939 [INFO] Executing script: sql/ranking_queries.sql
+2026-07-01 00:34:41,945 [INFO] 
+Query Results:
+territory_id        territory_name  region          rep_name  total_sales  avg_attainment_pct
+         T02    New York Territory    East       Noah Rhodes   1805944.87              261.03
+         T27      Austin Territory   South      Justin Baker   1693276.23              203.49
+         T08     NY_West Territory    East        Gina Moore   1691127.73              218.68
+         T01      Boston Territory    East      Allison Hill   1663028.38              330.83
+         T06       Miami Territory    East   Connie Lawrence   1644878.24              281.10
+         T23  Cincinnati Territory Midwest       Ethan Adams   1621279.82              247.66
+         T31       Tampa Territory   South Rebecca Henderson   1480075.97              294.06
+         T19 Minneapolis Territory Midwest      Lisa Jackson   1463065.78              303.96
+         T05     Atlanta Territory    East   Cristian Santos   1454813.77              227.70
+         T04  Washington Territory    East     Daniel Wagner   1438166.17              257.65
+--------------------------------------------------
+2026-07-01 00:34:41,949 [INFO] 
+Query Results:
+rep_id          rep_name         territory_name  region  total_sales  attainment_pct
+   R01      Allison Hill       Boston Territory    East   1663028.38          330.62
+   R03   Angie Henderson Philadelphia Territory    East   1375269.11          327.79
+   R19      Lisa Jackson  Minneapolis Territory Midwest   1463065.78          303.67
+   R07   Abigail Shaffer Boston_North Territory    East   1373054.73          295.99
+   R31 Rebecca Henderson        Tampa Territory   South   1480075.97          293.76
+   R26        Judy Baker      Houston Territory   South   1367755.20          285.22
+   R06   Connie Lawrence        Miami Territory    East   1644878.24          280.88
+   R02       Noah Rhodes     New York Territory    East   1805944.87          260.85
+   R10        Ryan Munoz     Portland Territory    West   1223838.52          258.84
+   R04     Daniel Wagner   Washington Territory    East   1438166.17          257.33
+--------------------------------------------------
+2026-07-01 00:34:41,954 [INFO] 
+Query Results:
+rep_id         rep_name              territory_name   region  total_sales  attainment_pct
+   R34 Nathan Maldonado         Milwaukee Territory Region_X    902867.27          112.96
+   R38 Cassandra Gaines      Grand Rapids Territory Region_X    790763.32          123.07
+   R35   Debra Davidson Indianapolis_West Territory Region_X   1057065.38          129.39
+   R11   Monica Herrera     San Francisco Territory     West   1171991.49          129.41
+   R22      Patty Perez      Indianapolis Territory  Midwest    848937.26          135.39
+   R36   Jeffrey Chavez      Detroit_East Territory Region_X   1120272.19          136.02
+   R32    James Ferrell        Birmingham Territory    South   1144346.45          137.35
+   R33  Tricia Valencia     Chicago_South Territory Region_X    856466.30          146.37
+   R40  Brittany Farmer            Peoria Territory Region_X   1067169.64          157.18
+   R25   Matthew Foster            Dallas Territory    South   1057702.19          160.83
+--------------------------------------------------
+2026-07-01 00:34:41,966 [INFO] 
+Query Results:
+territory_id              territory_name   region         rep_name  tpi_score  total_potential_sales  total_actual_sales  total_opportunity_gap
+         T34         Milwaukee Territory Region_X Nathan Maldonado       72.4               695040.0           902867.27             -207827.27
+         T22      Indianapolis Territory  Midwest      Patty Perez       66.3               636480.0           848937.26             -212457.26
+         T38      Grand Rapids Territory Region_X Cassandra Gaines       58.2               558720.0           790763.32             -232043.32
+         T11     San Francisco Territory     West   Monica Herrera       94.6               908160.0          1171991.49             -263831.49
+         T32        Birmingham Territory    South    James Ferrell       86.8               833280.0          1144346.45             -311066.45
+         T35 Indianapolis_West Territory Region_X   Debra Davidson       74.0               710400.0          1057065.38             -346665.38
+         T33     Chicago_South Territory Region_X  Tricia Valencia       53.0               508800.0           856466.30             -347666.30
+         T28       New Orleans Territory    South   Stephanie Ross       62.7               601920.0           973082.43             -371162.43
+         T25            Dallas Territory    South   Matthew Foster       68.8               660480.0          1057702.19             -397222.19
+         T36      Detroit_East Territory Region_X   Jeffrey Chavez       74.6               716160.0          1120272.19             -404112.19
+--------------------------------------------------
+2026-07-01 00:34:41,966 [INFO] Successfully completed: sql/ranking_queries.sql
+2026-07-01 00:34:41,967 [INFO] Executing script: sql/validation.sql
+2026-07-01 00:34:42,150 [INFO] 
+Query Results:
+                   check_name status                                                           details
+    PK_NULL_CHECK_TERRITORIES PASSED                      Count of NULL primary keys in territories: 0
+           PK_NULL_CHECK_REPS PASSED                             Count of NULL primary keys in reps: 0
+           PK_NULL_CHECK_HCPS PASSED                             Count of NULL primary keys in hcps: 0
+      DUPLICATE_TERRITORY_IDS PASSED                              Max occurrences of a territory_id: 1
+COMPLETED_PLANNED_CALLS_LIMIT PASSED Count of records where completed planned calls > planned calls: 0
+       ADHERENCE_BOUNDS_CHECK PASSED        Count of records where adherence is out of 0-100 bounds: 0
+    FINANCIAL_NEGATIVES_CHECK PASSED                Count of records with negative sales or targets: 0
+          ORPHANED_REPS_CHECK PASSED             Count of reps assigned to non-existent territories: 0
+          ORPHANED_HCPS_CHECK PASSED             Count of HCPs assigned to non-existent territories: 0
+ ORPHANED_PRESCRIPTIONS_CHECK PASSED                   Count of prescriptions for non-existent HCPs: 0
+--------------------------------------------------
+2026-07-01 00:34:42,151 [INFO] Successfully completed: sql/validation.sql
+2026-07-01 00:34:42,151 [INFO] Executing script: sql/metrics_summary.sql
+2026-07-01 00:34:42,175 [INFO] Successfully completed: sql/metrics_summary.sql
+2026-07-01 00:34:42,175 [INFO] Starting CSV exports for Power BI dashboard...
+2026-07-01 00:34:42,294 [INFO] Exported vw_call_adherence -> data/exports/call_adherence.csv (480 rows)
+2026-07-01 00:34:42,310 [INFO] Exported vw_territory_opportunity -> data/exports/territory_opportunity.csv (480 rows)
+2026-07-01 00:34:42,414 [INFO] Exported vw_hcp_targeting -> data/exports/underserved_hcps.csv (38 rows)
+2026-07-01 00:34:42,525 [INFO] Exported vw_prescription_trends -> data/exports/prescription_trends.csv (1440 rows)
+2026-07-01 00:34:42,642 [INFO] Exported vw_market_share -> data/exports/market_share.csv (480 rows)
+2026-07-01 00:34:42,769 [INFO] Exported vw_root_cause -> data/exports/root_cause_summary.csv (5 rows)
+2026-07-01 00:34:43,105 [INFO] Exported vw_metrics_summary -> data/exports/dashboard_summary.csv (10 rows)
+2026-07-01 00:34:43,107 [INFO] SFE SQL query pipeline execution complete.

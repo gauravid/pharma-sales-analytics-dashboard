@@ -1,0 +1,606 @@
+hcp_id,hcp_name,specialty,territory_id,prescribing_decile
+H001,Dr. Ryan,Primary Care,T01,9
+H002,Dr. Osborne,Cardiology,T01,7
+H003,Dr. Moreno,Primary Care,T01,1
+H004,Dr. Smith,Cardiology,T01,8
+H005,Dr. Nguyen,Cardiology,T01,5
+H006,Dr. Smith,Endocrinology,T01,9
+H007,Dr. Hickman,Primary Care,T01,3
+H008,Dr. Koch,Cardiology,T01,5
+H009,Dr. Decker,Primary Care,T01,8
+H010,Dr. Parker,Endocrinology,T01,7
+H011,Dr. Brown,Primary Care,T01,8
+H012,Dr. Humphrey,Primary Care,T01,6
+H013,Dr. Arroyo,Cardiology,T01,4
+H014,Dr. Miller,Cardiology,T01,8
+H015,Dr. Tucker,Cardiology,T01,5
+H016,Dr. Jones,Cardiology,T01,6
+H017,Dr. Hodges,Cardiology,T02,10
+H018,Dr. Cannon,Cardiology,T02,3
+H019,Dr. Anderson,Primary Care,T02,7
+H020,Dr. Alvarez,Cardiology,T02,2
+H021,Dr. Pierce,Primary Care,T02,4
+H022,Dr. Baker,Primary Care,T02,7
+H023,Dr. Brennan,Endocrinology,T02,7
+H024,Dr. Henderson,Primary Care,T02,9
+H025,Dr. Lewis,Cardiology,T02,7
+H026,Dr. Ryan,Cardiology,T02,5
+H027,Dr. Blair,Primary Care,T02,4
+H028,Dr. Harris,Endocrinology,T02,8
+H029,Dr. Collins,Cardiology,T02,6
+H030,Dr. Carney,Primary Care,T02,10
+H031,Dr. Santos,Cardiology,T02,4
+H032,Dr. Kim,Endocrinology,T02,9
+H033,Dr. Holmes,Primary Care,T02,9
+H034,Dr. Martinez,Endocrinology,T03,6
+H035,Dr. Walker,Primary Care,T03,5
+H036,Dr. Morgan,Primary Care,T03,8
+H037,Dr. Chapman,Primary Care,T03,7
+H038,Dr. Hall,Primary Care,T03,9
+H039,Dr. Robinson,Cardiology,T03,9
+H040,Dr. Jones,Endocrinology,T03,9
+H041,Dr. Welch,Primary Care,T03,3
+H042,Dr. Perez,Endocrinology,T03,4
+H043,Dr. Whitehead,Endocrinology,T03,7
+H044,Dr. Heath,Primary Care,T03,6
+H045,Dr. Jones,Endocrinology,T03,9
+H046,Dr. Young,Cardiology,T03,7
+H047,Dr. Caldwell,Primary Care,T03,1
+H048,Dr. Lewis,Endocrinology,T03,3
+H049,Dr. Anderson,Cardiology,T04,6
+H050,Dr. Walls,Primary Care,T04,6
+H051,Dr. Duncan,Cardiology,T04,9
+H052,Dr. Kennedy,Primary Care,T04,3
+H053,Dr. Mueller,Cardiology,T04,5
+H054,Dr. Aguirre,Primary Care,T04,6
+H055,Dr. Lee,Cardiology,T04,5
+H056,Dr. Davis,Primary Care,T04,10
+H057,Dr. Jordan,Cardiology,T04,5
+H058,Dr. Henderson,Primary Care,T04,7
+H059,Dr. Owens,Endocrinology,T04,6
+H060,Dr. Daniel,Primary Care,T04,10
+H061,Dr. Nunez,Primary Care,T04,9
+H062,Dr. Joyce,Cardiology,T04,3
+H063,Dr. Garcia,Primary Care,T04,3
+H064,Dr. Powell,Cardiology,T05,8
+H065,Dr. Morgan,Endocrinology,T05,9
+H066,Dr. Hensley,Primary Care,T05,9
+H067,Dr. Wright,Primary Care,T05,4
+H068,Dr. Lee,Primary Care,T05,2
+H069,Dr. West,Primary Care,T05,9
+H070,Dr. Henderson,Cardiology,T05,8
+H071,Dr. Ramirez,Endocrinology,T05,5
+H072,Dr. Wright,Primary Care,T05,4
+H073,Dr. Leblanc,Cardiology,T05,3
+H074,Dr. Ramos,Endocrinology,T05,9
+H075,Dr. Callahan,Primary Care,T05,4
+H076,Dr. Pierce,Primary Care,T05,5
+H077,Dr. Williams,Primary Care,T05,6
+H078,Dr. Kidd,Primary Care,T05,2
+H079,Dr. Huff,Primary Care,T05,3
+H080,Dr. Novak,Cardiology,T06,7
+H081,Dr. House,Endocrinology,T06,8
+H082,Dr. Allison,Endocrinology,T06,10
+H083,Dr. Martin,Cardiology,T06,9
+H084,Dr. Tucker,Cardiology,T06,1
+H085,Dr. Lewis,Endocrinology,T06,6
+H086,Dr. Morales,Primary Care,T06,7
+H087,Dr. Brown,Primary Care,T06,8
+H088,Dr. Gray,Cardiology,T06,6
+H089,Dr. Galloway,Primary Care,T06,9
+H090,Dr. Baker,Primary Care,T06,7
+H091,Dr. Bowers,Cardiology,T06,9
+H092,Dr. Gibson,Primary Care,T06,7
+H093,Dr. Henderson,Endocrinology,T06,7
+H094,Dr. Bernard,Primary Care,T06,3
+H095,Dr. Cowan,Primary Care,T07,9
+H096,Dr. Peters,Primary Care,T07,5
+H097,Dr. Higgins,Primary Care,T07,1
+H098,Dr. Moore,Endocrinology,T07,6
+H099,Dr. Phillips,Primary Care,T07,7
+H100,Dr. Novak,Endocrinology,T07,6
+H101,Dr. Riley,Cardiology,T07,6
+H102,Dr. Daniels,Primary Care,T07,8
+H103,Dr. Adkins,Cardiology,T07,2
+H104,Dr. Brown,Primary Care,T07,7
+H105,Dr. Silva,Endocrinology,T07,8
+H106,Dr. Shaw,Primary Care,T07,7
+H107,Dr. Farrell,Cardiology,T07,3
+H108,Dr. Moore,Cardiology,T07,4
+H109,Dr. Yu,Endocrinology,T07,8
+H110,Dr. Miller,Cardiology,T07,5
+H111,Dr. Lopez,Cardiology,T08,7
+H112,Dr. Larson,Endocrinology,T08,4
+H113,Dr. Leonard,Primary Care,T08,1
+H114,Dr. Young,Primary Care,T08,8
+H115,Dr. Wilson,Cardiology,T08,6
+H116,Dr. Zamora,Cardiology,T08,10
+H117,Dr. Sanchez,Primary Care,T08,2
+H118,Dr. Wheeler,Cardiology,T08,8
+H119,Dr. Harvey,Endocrinology,T08,8
+H120,Dr. Barnes,Primary Care,T08,10
+H121,Dr. Silva,Primary Care,T08,10
+H122,Dr. Mills,Primary Care,T08,7
+H123,Dr. Donovan,Primary Care,T08,6
+H124,Dr. Harris,Primary Care,T08,6
+H125,Dr. Moran,Primary Care,T08,8
+H126,Dr. Allen,Endocrinology,T08,4
+H127,Dr. Foster,Cardiology,T08,7
+H128,Dr. Powers,Endocrinology,T09,4
+H129,Dr. Evans,Endocrinology,T09,7
+H130,Dr. Stewart,Cardiology,T09,5
+H131,Dr. Walton,Primary Care,T09,2
+H132,Dr. Jones,Cardiology,T09,5
+H133,Dr. Ellis,Cardiology,T09,4
+H134,Dr. Murillo,Endocrinology,T09,5
+H135,Dr. Ferrell,Endocrinology,T09,2
+H136,Dr. Jones,Primary Care,T09,5
+H137,Dr. Lewis,Primary Care,T09,9
+H138,Dr. Baker,Cardiology,T09,9
+H139,Dr. Mahoney,Primary Care,T09,6
+H140,Dr. Ibarra,Primary Care,T09,4
+H141,Dr. Suarez,Endocrinology,T09,9
+H142,Dr. Wood,Primary Care,T09,6
+H143,Dr. Moore,Primary Care,T09,8
+H144,Dr. Bass,Primary Care,T09,6
+H145,Dr. Warner,Endocrinology,T10,1
+H146,Dr. Carr,Endocrinology,T10,7
+H147,Dr. Archer,Endocrinology,T10,3
+H148,Dr. Valdez,Endocrinology,T10,3
+H149,Dr. Smith,Primary Care,T10,1
+H150,Dr. Montoya,Endocrinology,T10,6
+H151,Dr. Evans,Cardiology,T10,7
+H152,Dr. Alvarado,Cardiology,T10,6
+H153,Dr. Mcmillan,Cardiology,T10,5
+H154,Dr. Taylor,Cardiology,T10,5
+H155,Dr. Wilson,Primary Care,T10,5
+H156,Dr. Rodriguez,Primary Care,T10,8
+H157,Dr. Tran,Endocrinology,T10,2
+H158,Dr. Nelson,Cardiology,T10,6
+H159,Dr. Jacobs,Primary Care,T10,5
+H160,Dr. Robbins,Primary Care,T11,7
+H161,Dr. Harris,Primary Care,T11,9
+H162,Dr. Walters,Cardiology,T11,1
+H163,Dr. Baker,Cardiology,T11,3
+H164,Dr. Freeman,Primary Care,T11,6
+H165,Dr. Whitehead,Cardiology,T11,7
+H166,Dr. Mathis,Primary Care,T11,3
+H167,Dr. Davis,Primary Care,T11,8
+H168,Dr. Henderson,Cardiology,T11,8
+H169,Dr. Hill,Primary Care,T11,2
+H170,Dr. Smith,Cardiology,T11,5
+H171,Dr. Wise,Primary Care,T11,10
+H172,Dr. Walsh,Endocrinology,T11,7
+H173,Dr. Green,Primary Care,T12,8
+H174,Dr. Figueroa,Cardiology,T12,7
+H175,Dr. Arnold,Endocrinology,T12,7
+H176,Dr. Patterson,Primary Care,T12,8
+H177,Dr. Smith,Primary Care,T12,1
+H178,Dr. Jones,Primary Care,T12,7
+H179,Dr. Ware,Cardiology,T12,7
+H180,Dr. Mckee,Cardiology,T12,6
+H181,Dr. Gardner,Endocrinology,T12,6
+H182,Dr. Davenport,Endocrinology,T12,9
+H183,Dr. Aguilar,Endocrinology,T12,3
+H184,Dr. Hernandez,Cardiology,T12,6
+H185,Dr. Anderson,Primary Care,T12,7
+H186,Dr. Parker,Primary Care,T13,6
+H187,Dr. Nolan,Primary Care,T13,7
+H188,Dr. Flynn,Endocrinology,T13,4
+H189,Dr. Valencia,Primary Care,T13,4
+H190,Dr. Nolan,Endocrinology,T13,8
+H191,Dr. Clark,Primary Care,T13,7
+H192,Dr. Wright,Endocrinology,T13,6
+H193,Dr. Garcia,Endocrinology,T13,6
+H194,Dr. Deleon,Endocrinology,T13,4
+H195,Dr. Henson,Endocrinology,T13,7
+H196,Dr. Russell,Primary Care,T13,6
+H197,Dr. Oliver,Primary Care,T13,3
+H198,Dr. Moore,Cardiology,T13,5
+H199,Dr. Spears,Primary Care,T13,4
+H200,Dr. Hancock,Endocrinology,T13,7
+H201,Dr. Cherry,Endocrinology,T13,1
+H202,Dr. Cochran,Endocrinology,T13,5
+H203,Dr. Keith,Endocrinology,T14,7
+H204,Dr. Johnson,Endocrinology,T14,6
+H205,Dr. Doyle,Endocrinology,T14,8
+H206,Dr. Cook,Endocrinology,T14,7
+H207,Dr. Galvan,Endocrinology,T14,4
+H208,Dr. Pham,Cardiology,T14,3
+H209,Dr. Shields,Cardiology,T14,6
+H210,Dr. Cochran,Primary Care,T14,3
+H211,Dr. Adams,Cardiology,T14,6
+H212,Dr. Cobb,Primary Care,T14,10
+H213,Dr. Rodriguez,Primary Care,T14,4
+H214,Dr. Brennan,Cardiology,T14,3
+H215,Dr. Garrison,Cardiology,T14,3
+H216,Dr. Walker,Cardiology,T14,6
+H217,Dr. Velasquez,Cardiology,T15,2
+H218,Dr. Stevens,Endocrinology,T15,9
+H219,Dr. Torres,Primary Care,T15,8
+H220,Dr. Pope,Cardiology,T15,1
+H221,Dr. Perez,Endocrinology,T15,6
+H222,Dr. Johnson,Endocrinology,T15,10
+H223,Dr. Lee,Endocrinology,T15,9
+H224,Dr. Murphy,Cardiology,T15,2
+H225,Dr. Lin,Endocrinology,T15,7
+H226,Dr. Rasmussen,Primary Care,T15,3
+H227,Dr. Ramirez,Primary Care,T15,9
+H228,Dr. May,Cardiology,T15,4
+H229,Dr. Ross,Primary Care,T15,5
+H230,Dr. Zavala,Primary Care,T15,7
+H231,Dr. Herrera,Primary Care,T15,5
+H232,Dr. Crosby,Endocrinology,T16,7
+H233,Dr. Wilson,Endocrinology,T16,6
+H234,Dr. Waller,Cardiology,T16,10
+H235,Dr. White,Cardiology,T16,8
+H236,Dr. Estes,Primary Care,T16,4
+H237,Dr. Baker,Cardiology,T16,4
+H238,Dr. Rodriguez,Primary Care,T16,3
+H239,Dr. Hamilton,Endocrinology,T16,7
+H240,Dr. Chandler,Endocrinology,T16,1
+H241,Dr. Edwards,Endocrinology,T16,4
+H242,Dr. Obrien,Primary Care,T16,2
+H243,Dr. Dixon,Cardiology,T16,4
+H244,Dr. Cruz,Primary Care,T16,7
+H245,Dr. Ray,Primary Care,T16,3
+H246,Dr. Scott,Cardiology,T16,4
+H247,Dr. Fletcher,Cardiology,T16,4
+H248,Dr. Smith,Cardiology,T17,3
+H249,Dr. Frost,Endocrinology,T17,8
+H250,Dr. Ryan,Primary Care,T17,4
+H251,Dr. Ball,Cardiology,T17,7
+H252,Dr. Harmon,Primary Care,T17,9
+H253,Dr. Lambert,Primary Care,T17,6
+H254,Dr. Diaz,Cardiology,T17,1
+H255,Dr. Jones,Endocrinology,T17,5
+H256,Dr. Beck,Endocrinology,T17,2
+H257,Dr. Rivera,Primary Care,T17,8
+H258,Dr. Edwards,Primary Care,T17,10
+H259,Dr. Charles,Primary Care,T17,7
+H260,Dr. Cortez,Endocrinology,T17,1
+H261,Dr. Evans,Primary Care,T17,6
+H262,Dr. Parker,Primary Care,T18,3
+H263,Dr. Ortiz,Primary Care,T18,7
+H264,Dr. Powell,Endocrinology,T18,2
+H265,Dr. Phillips,Endocrinology,T18,5
+H266,Dr. Martinez,Primary Care,T18,9
+H267,Dr. Fisher,Endocrinology,T18,7
+H268,Dr. Bentley,Endocrinology,T18,9
+H269,Dr. Byrd,Primary Care,T18,6
+H270,Dr. Orr,Endocrinology,T18,5
+H271,Dr. Gilbert,Endocrinology,T18,10
+H272,Dr. Turner,Endocrinology,T18,6
+H273,Dr. Kelley,Primary Care,T18,7
+H274,Dr. Smith,Primary Care,T18,5
+H275,Dr. Mitchell,Cardiology,T18,5
+H276,Dr. Jordan,Primary Care,T18,7
+H277,Dr. Carpenter,Primary Care,T18,4
+H278,Dr. Pena,Cardiology,T19,4
+H279,Dr. Marshall,Primary Care,T19,6
+H280,Dr. Ramos,Cardiology,T19,7
+H281,Dr. Lewis,Primary Care,T19,7
+H282,Dr. Kennedy,Endocrinology,T19,1
+H283,Dr. Santana,Endocrinology,T19,4
+H284,Dr. Flynn,Primary Care,T19,2
+H285,Dr. Jackson,Primary Care,T19,7
+H286,Dr. Miller,Cardiology,T19,9
+H287,Dr. Robertson,Endocrinology,T19,7
+H288,Dr. Schultz,Endocrinology,T19,6
+H289,Dr. Rogers,Endocrinology,T19,6
+H290,Dr. Cardenas,Cardiology,T19,3
+H291,Dr. Potter,Primary Care,T19,8
+H292,Dr. Chambers,Cardiology,T19,2
+H293,Dr. Walker,Primary Care,T19,9
+H294,Dr. Gonzalez,Endocrinology,T19,8
+H295,Dr. Johnson,Primary Care,T20,4
+H296,Dr. Sanchez,Endocrinology,T20,7
+H297,Dr. Alvarez,Primary Care,T20,6
+H298,Dr. Atkinson,Cardiology,T20,6
+H299,Dr. Jones,Endocrinology,T20,6
+H300,Dr. Perry,Primary Care,T20,6
+H301,Dr. Soto,Endocrinology,T20,3
+H302,Dr. Lee,Primary Care,T20,7
+H303,Dr. Horton,Cardiology,T20,8
+H304,Dr. Snyder,Cardiology,T20,8
+H305,Dr. Sanchez,Primary Care,T20,8
+H306,Dr. Douglas,Endocrinology,T20,7
+H307,Dr. Smith,Primary Care,T20,10
+H308,Dr. Potter,Endocrinology,T20,1
+H309,Dr. Carrillo,Primary Care,T20,7
+H310,Dr. Rodriguez,Primary Care,T21,6
+H311,Dr. Coleman,Primary Care,T21,6
+H312,Dr. Thompson,Primary Care,T21,5
+H313,Dr. Rubio,Primary Care,T21,3
+H314,Dr. Holmes,Endocrinology,T21,10
+H315,Dr. Williams,Endocrinology,T21,7
+H316,Dr. Wright,Primary Care,T21,9
+H317,Dr. Charles,Primary Care,T21,9
+H318,Dr. Bryant,Endocrinology,T21,5
+H319,Dr. Solis,Primary Care,T21,8
+H320,Dr. Contreras,Primary Care,T21,1
+H321,Dr. Travis,Cardiology,T21,7
+H322,Dr. Larson,Primary Care,T21,10
+H323,Dr. Dodson,Endocrinology,T22,2
+H324,Dr. Vance,Primary Care,T22,9
+H325,Dr. Salazar,Endocrinology,T22,7
+H326,Dr. Ball,Primary Care,T22,1
+H327,Dr. Wagner,Primary Care,T22,4
+H328,Dr. Rivas,Endocrinology,T22,3
+H329,Dr. Kelley,Primary Care,T22,6
+H330,Dr. Merritt,Primary Care,T22,3
+H331,Dr. Manning,Cardiology,T22,9
+H332,Dr. Wells,Primary Care,T22,4
+H333,Dr. Green,Primary Care,T22,3
+H334,Dr. Wright,Endocrinology,T22,4
+H335,Dr. Walsh,Endocrinology,T22,1
+H336,Dr. Cannon,Primary Care,T23,7
+H337,Dr. Boyd,Cardiology,T23,6
+H338,Dr. Sims,Endocrinology,T23,7
+H339,Dr. Hill,Primary Care,T23,6
+H340,Dr. Jones,Endocrinology,T23,8
+H341,Dr. Mitchell,Cardiology,T23,5
+H342,Dr. Nelson,Endocrinology,T23,4
+H343,Dr. Flores,Primary Care,T23,7
+H344,Dr. Fernandez,Primary Care,T23,4
+H345,Dr. Taylor,Primary Care,T23,7
+H346,Dr. Hall,Endocrinology,T23,6
+H347,Dr. Benson,Primary Care,T23,8
+H348,Dr. Mccarthy,Cardiology,T23,7
+H349,Dr. Brown,Endocrinology,T23,9
+H350,Dr. Russell,Endocrinology,T23,8
+H351,Dr. Daniels,Primary Care,T23,5
+H352,Dr. Perry,Primary Care,T24,7
+H353,Dr. Clark,Primary Care,T24,7
+H354,Dr. Fisher,Primary Care,T24,7
+H355,Dr. Stein,Primary Care,T24,7
+H356,Dr. Silva,Endocrinology,T24,6
+H357,Dr. Dominguez,Primary Care,T24,8
+H358,Dr. Gates,Cardiology,T24,4
+H359,Dr. Cannon,Primary Care,T24,3
+H360,Dr. James,Cardiology,T24,6
+H361,Dr. Smith,Primary Care,T24,6
+H362,Dr. Bell,Primary Care,T24,8
+H363,Dr. Molina,Endocrinology,T24,8
+H364,Dr. Castaneda,Endocrinology,T24,8
+H365,Dr. Ashley,Primary Care,T24,5
+H366,Dr. Barnes,Endocrinology,T25,2
+H367,Dr. Adkins,Primary Care,T25,4
+H368,Dr. Payne,Primary Care,T25,7
+H369,Dr. Morrison,Endocrinology,T25,8
+H370,Dr. Walker,Primary Care,T25,2
+H371,Dr. Robinson,Endocrinology,T25,4
+H372,Dr. Graham,Cardiology,T25,5
+H373,Dr. Johnson,Primary Care,T25,4
+H374,Dr. Rogers,Endocrinology,T25,7
+H375,Dr. Shelton,Endocrinology,T25,7
+H376,Dr. Powell,Endocrinology,T25,7
+H377,Dr. Martin,Primary Care,T25,5
+H378,Dr. Mcdonald,Primary Care,T25,7
+H379,Dr. Anderson,Primary Care,T26,5
+H380,Dr. Dean,Endocrinology,T26,3
+H381,Dr. Johnson,Primary Care,T26,5
+H382,Dr. Long,Endocrinology,T26,2
+H383,Dr. Elliott,Primary Care,T26,3
+H384,Dr. Johnson,Endocrinology,T26,7
+H385,Dr. Day,Primary Care,T26,9
+H386,Dr. Taylor,Endocrinology,T26,8
+H387,Dr. Murray,Cardiology,T26,5
+H388,Dr. Williams,Cardiology,T26,6
+H389,Dr. Gray,Endocrinology,T26,10
+H390,Dr. Lewis,Cardiology,T26,5
+H391,Dr. Murphy,Endocrinology,T26,10
+H392,Dr. Juarez,Primary Care,T26,2
+H393,Dr. Gray,Primary Care,T26,6
+H394,Dr. Walton,Primary Care,T26,5
+H395,Dr. Decker,Endocrinology,T27,10
+H396,Dr. King,Primary Care,T27,8
+H397,Dr. Miller,Cardiology,T27,4
+H398,Dr. Smith,Primary Care,T27,10
+H399,Dr. Ryan,Cardiology,T27,5
+H400,Dr. Cooke,Primary Care,T27,8
+H401,Dr. Bell,Cardiology,T27,8
+H402,Dr. Santos,Primary Care,T27,7
+H403,Dr. Harrington,Primary Care,T27,4
+H404,Dr. Pearson,Primary Care,T27,8
+H405,Dr. Webster,Primary Care,T27,4
+H406,Dr. Herring,Primary Care,T27,10
+H407,Dr. Gonzalez,Primary Care,T27,8
+H408,Dr. Smith,Cardiology,T27,9
+H409,Dr. Hernandez,Cardiology,T27,5
+H410,Dr. Martinez,Primary Care,T27,7
+H411,Dr. Caldwell,Cardiology,T28,2
+H412,Dr. Elliott,Primary Care,T28,6
+H413,Dr. Robinson,Primary Care,T28,6
+H414,Dr. Lyons,Primary Care,T28,6
+H415,Dr. Wang,Cardiology,T28,6
+H416,Dr. Jackson,Primary Care,T28,1
+H417,Dr. Lawson,Primary Care,T28,9
+H418,Dr. Adkins,Primary Care,T28,6
+H419,Dr. Wilson,Primary Care,T28,2
+H420,Dr. Weiss,Endocrinology,T28,5
+H421,Dr. Oconnell,Primary Care,T28,6
+H422,Dr. Rodriguez,Primary Care,T28,2
+H423,Dr. Johnson,Cardiology,T28,7
+H424,Dr. Collins,Cardiology,T29,7
+H425,Dr. Byrd,Primary Care,T29,7
+H426,Dr. Rubio,Endocrinology,T29,7
+H427,Dr. Sanders,Endocrinology,T29,6
+H428,Dr. Espinoza,Endocrinology,T29,8
+H429,Dr. Jones,Cardiology,T29,7
+H430,Dr. Vaughn,Primary Care,T29,6
+H431,Dr. Burton,Primary Care,T29,6
+H432,Dr. Garcia,Primary Care,T29,5
+H433,Dr. Barton,Primary Care,T29,5
+H434,Dr. Jefferson,Primary Care,T29,5
+H435,Dr. Burke,Endocrinology,T29,4
+H436,Dr. Martinez,Primary Care,T29,7
+H437,Dr. Riggs,Cardiology,T30,8
+H438,Dr. Patton,Cardiology,T30,2
+H439,Dr. Reed,Primary Care,T30,8
+H440,Dr. Patterson,Primary Care,T30,7
+H441,Dr. Wood,Primary Care,T30,5
+H442,Dr. Hunter,Cardiology,T30,5
+H443,Dr. Peterson,Primary Care,T30,8
+H444,Dr. Atkinson,Primary Care,T30,8
+H445,Dr. Short,Primary Care,T30,7
+H446,Dr. Garcia,Endocrinology,T30,7
+H447,Dr. Yu,Cardiology,T30,7
+H448,Dr. Reid,Cardiology,T30,2
+H449,Dr. Poole,Primary Care,T30,5
+H450,Dr. Zimmerman,Primary Care,T30,7
+H451,Dr. Graham,Primary Care,T30,8
+H452,Dr. Gross,Primary Care,T30,8
+H453,Dr. Sheppard,Primary Care,T31,6
+H454,Dr. Nelson,Primary Care,T31,7
+H455,Dr. Morton,Primary Care,T31,1
+H456,Dr. Medina,Endocrinology,T31,8
+H457,Dr. Webb,Primary Care,T31,5
+H458,Dr. Graham,Cardiology,T31,3
+H459,Dr. Simon,Primary Care,T31,2
+H460,Dr. Adams,Primary Care,T31,10
+H461,Dr. Christian,Cardiology,T31,6
+H462,Dr. Rivas,Endocrinology,T31,6
+H463,Dr. Miller,Cardiology,T31,5
+H464,Dr. Keith,Endocrinology,T31,9
+H465,Dr. Sanchez,Primary Care,T31,9
+H466,Dr. Marshall,Cardiology,T31,8
+H467,Dr. Bishop,Cardiology,T31,2
+H468,Dr. Gray,Endocrinology,T31,6
+H469,Dr. Johnson,Primary Care,T31,5
+H470,Dr. Rosales,Primary Care,T32,2
+H471,Dr. White,Endocrinology,T32,4
+H472,Dr. Lewis,Primary Care,T32,6
+H473,Dr. Salinas,Primary Care,T32,1
+H474,Dr. Peterson,Endocrinology,T32,7
+H475,Dr. Beard,Cardiology,T32,5
+H476,Dr. Haynes,Cardiology,T32,3
+H477,Dr. Hill,Endocrinology,T32,5
+H478,Dr. Smith,Cardiology,T32,8
+H479,Dr. Vaughan,Cardiology,T32,5
+H480,Dr. Miller,Primary Care,T32,6
+H481,Dr. Cortez,Primary Care,T32,8
+H482,Dr. Freeman,Cardiology,T32,9
+H483,Dr. Chang,Cardiology,T32,1
+H484,Dr. Vaughn,Primary Care,T33,7
+H485,Dr. Brewer,Primary Care,T33,7
+H486,Dr. Henry,Endocrinology,T33,2
+H487,Dr. Mcguire,Cardiology,T33,5
+H488,Dr. Davis,Primary Care,T33,7
+H489,Dr. Walker,Primary Care,T33,9
+H490,Dr. Holt,Cardiology,T33,8
+H491,Dr. Torres,Cardiology,T33,7
+H492,Dr. Perkins,Primary Care,T33,5
+H493,Dr. Kennedy,Endocrinology,T33,5
+H494,Dr. Schmidt,Endocrinology,T33,3
+H495,Dr. Coleman,Primary Care,T33,2
+H496,Dr. Reese,Primary Care,T33,9
+H497,Dr. Rivera,Endocrinology,T34,10
+H498,Dr. Warner,Primary Care,T34,3
+H499,Dr. Nelson,Cardiology,T34,4
+H500,Dr. King,Cardiology,T34,3
+H501,Dr. Martinez,Primary Care,T34,2
+H502,Dr. Lee,Primary Care,T34,7
+H503,Dr. Wilson,Endocrinology,T34,6
+H504,Dr. Herrera,Primary Care,T34,7
+H505,Dr. Gill,Primary Care,T34,7
+H506,Dr. Lopez,Primary Care,T34,5
+H507,Dr. Robinson,Primary Care,T34,5
+H508,Dr. Washington,Endocrinology,T34,6
+H509,Dr. Hardy,Primary Care,T34,8
+H510,Dr. Bray,Primary Care,T34,5
+H511,Dr. Warren,Cardiology,T34,6
+H512,Dr. Campbell,Cardiology,T35,8
+H513,Dr. Garcia,Cardiology,T35,9
+H514,Dr. Lee,Primary Care,T35,7
+H515,Dr. Perez,Primary Care,T35,6
+H516,Dr. White,Primary Care,T35,8
+H517,Dr. Smith,Primary Care,T35,6
+H518,Dr. Ferguson,Primary Care,T35,7
+H519,Dr. Hill,Endocrinology,T35,6
+H520,Dr. Mccann,Cardiology,T35,2
+H521,Dr. Tran,Cardiology,T35,9
+H522,Dr. Terry,Endocrinology,T35,7
+H523,Dr. Martinez,Primary Care,T35,3
+H524,Dr. Oneill,Cardiology,T35,6
+H525,Dr. Henry,Primary Care,T36,7
+H526,Dr. Salas,Endocrinology,T36,9
+H527,Dr. Andrews,Endocrinology,T36,8
+H528,Dr. Harrison,Primary Care,T36,2
+H529,Dr. Alexander,Primary Care,T36,5
+H530,Dr. Lopez,Endocrinology,T36,6
+H531,Dr. Williams,Endocrinology,T36,4
+H532,Dr. Everett,Primary Care,T36,10
+H533,Dr. Woods,Primary Care,T36,3
+H534,Dr. Short,Cardiology,T36,7
+H535,Dr. Morales,Primary Care,T36,5
+H536,Dr. Jones,Primary Care,T36,7
+H537,Dr. Soto,Cardiology,T36,7
+H538,Dr. Brown,Cardiology,T36,6
+H539,Dr. Hernandez,Primary Care,T36,5
+H540,Dr. Hart,Cardiology,T36,7
+H541,Dr. Torres,Cardiology,T37,7
+H542,Dr. Mcknight,Primary Care,T37,1
+H543,Dr. Wilson,Endocrinology,T37,10
+H544,Dr. Duran,Endocrinology,T37,8
+H545,Dr. Obrien,Cardiology,T37,10
+H546,Dr. Gibbs,Cardiology,T37,4
+H547,Dr. Perez,Primary Care,T37,6
+H548,Dr. Mills,Primary Care,T37,8
+H549,Dr. Hayes,Primary Care,T37,7
+H550,Dr. Ramos,Primary Care,T37,7
+H551,Dr. Dalton,Primary Care,T37,3
+H552,Dr. Branch,Cardiology,T37,7
+H553,Dr. Torres,Primary Care,T37,9
+H554,Dr. Oliver,Primary Care,T37,1
+H555,Dr. Lynch,Endocrinology,T37,7
+H556,Dr. Singh,Primary Care,T37,7
+H557,Dr. Meza,Primary Care,T37,8
+H558,Dr. Clark,Primary Care,T38,5
+H559,Dr. Clark,Primary Care,T38,6
+H560,Dr. Guerrero,Primary Care,T38,5
+H561,Dr. Moore,Primary Care,T38,10
+H562,Dr. Thompson,Endocrinology,T38,4
+H563,Dr. Jones,Endocrinology,T38,6
+H564,Dr. Smith,Primary Care,T38,8
+H565,Dr. Hayes,Primary Care,T38,3
+H566,Dr. Wheeler,Endocrinology,T38,7
+H567,Dr. Carter,Primary Care,T38,6
+H568,Dr. Hall,Cardiology,T38,8
+H569,Dr. Mann,Primary Care,T38,4
+H570,Dr. Warner,Primary Care,T38,4
+H571,Dr. Gibson,Primary Care,T38,3
+H572,Dr. Mcdaniel,Cardiology,T39,9
+H573,Dr. Bradshaw,Primary Care,T39,9
+H574,Dr. French,Primary Care,T39,5
+H575,Dr. Weber,Endocrinology,T39,5
+H576,Dr. Guerrero,Endocrinology,T39,2
+H577,Dr. Peck,Cardiology,T39,5
+H578,Dr. Coleman,Cardiology,T39,7
+H579,Dr. Stephens,Endocrinology,T39,3
+H580,Dr. Holland,Cardiology,T39,9
+H581,Dr. Kerr,Endocrinology,T39,8
+H582,Dr. Serrano,Primary Care,T39,6
+H583,Dr. Jones,Primary Care,T39,9
+H584,Dr. Martin,Cardiology,T39,4
+H585,Dr. Parker,Cardiology,T39,9
+H586,Dr. Curry,Primary Care,T39,6
+H587,Dr. Carroll,Primary Care,T39,4
+H588,Dr. Roberts,Cardiology,T40,5
+H589,Dr. Martinez,Primary Care,T40,6
+H590,Dr. Barker,Cardiology,T40,9
+H591,Dr. Lyons,Primary Care,T40,1
+H592,Dr. Bender,Primary Care,T40,4
+H593,Dr. Mason,Cardiology,T40,6
+H594,Dr. Snyder,Primary Care,T40,4
+H595,Dr. Miller,Endocrinology,T40,7
+H596,Dr. Williams,Cardiology,T40,10
+H597,Dr. Reynolds,Cardiology,T40,6
+H598,Dr. Morris,Primary Care,T40,10
+H599,Dr. Wright,Primary Care,T40,5
+H600,Dr. Davis,Endocrinology,T40,7
+H601,Dr.  Elliott,Primary Care,T26,3
+H602,Dr. Cortez MD,Endocrinology,T17,1
+H603,Dr. Hodges MD,Cardiology,T02,10
+H604,Dr.  Barnes,Endocrinology,T25,2
+H605,Dr. Henderson MD,Cardiology,T05,8
