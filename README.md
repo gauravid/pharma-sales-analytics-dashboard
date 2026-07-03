@@ -6,30 +6,6 @@ Rather than relying on retrospective, manual spreadsheet reconciliations that ta
 
 ---
 
-## Project Repository Structure
-
-```
-c:\Users\Gauravi\Desktop\ba_pro\
-├── data/
-│   ├── sfe_analytics.db         # SQLite database file containing all cleaned tables
-│   ├── territories.csv          # Territory Master raw extract
-│   ├── reps.csv                 # Sales Representative Master raw extract
-│   ├── hcps.csv                 # Healthcare Provider Master raw extract
-│   ├── calls.csv                # CRM Call Activity Log raw extract
-│   ├── prescriptions.csv        # Claims / Prescription Data raw extract
-│   └── sales_targets.csv        # Territory Monthly Sales & Target Quotas
-├── docs/
-│   ├── stakeholder_requirements.md  # Simulated interviews, MoSCoW log, and KPI formulas
-│   ├── data_dictionary.md       # Full table schemas, column types, and Mermaid ER diagram
-│   └── process_mapping.md       # As-Is/To-Be process flows and Root-Cause Issue Tree
-├── scripts/
-│   └── generate_data.py         # Python script using Faker to generate synthetic data
-├── venv/                        # Python virtual environment (ignored by git)
-├── requirements.txt             # Python project dependencies
-└── README.md                    # Main project documentation
-```
-
----
 
 ## Technology Stack
 
